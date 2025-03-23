@@ -1,0 +1,103 @@
+2025-01-06 15:00:44,333 INFO:Script started.
+2025-01-06 15:01:21,950 INFO:Script started.
+2025-01-06 15:01:56,876 INFO:Script started.
+2025-01-06 15:02:47,407 INFO:Script started.
+2025-01-06 15:03:39,491 INFO:Script started.
+2025-01-06 15:03:55,886 INFO:Sending XML data to Tally
+2025-01-06 15:03:55,920 INFO:Successfully sent data to Tally
+2025-01-06 15:03:55,920 INFO:Successfully exported 5 transactions to Tally
+2025-01-06 15:54:34,441 INFO:Script started.
+2025-01-06 15:54:41,239 INFO:Script started.
+2025-01-06 16:06:14,414 INFO:Script started.
+2025-01-06 16:06:29,967 INFO:Script started.
+2025-01-06 16:06:46,327 INFO:Sending XML data to Tally
+2025-01-06 16:06:47,049 INFO:Successfully sent data to Tally
+2025-01-06 16:06:47,049 INFO:Successfully exported 5 transactions to Tally
+2025-01-06 16:06:47,650 INFO:Starting full data synchronization.
+2025-01-06 16:06:47,650 INFO:tally_data: Constructing XML payload...
+2025-01-06 16:06:47,650 INFO:tally_data: Fetching data from Tally...
+2025-01-06 16:06:47,678 INFO:tally_data: Data fetched from Tally successfully.
+2025-01-06 16:06:47,678 INFO:tally_data: Parsing XML response...
+2025-01-06 16:06:47,678 INFO:tally_data: Parsed 0 records.
+2025-01-06 16:06:47,678 INFO:tally_data: Inserting data into PostgreSQL...
+2025-01-06 16:06:47,678 INFO:No data to insert.
+2025-01-06 16:06:47,678 INFO:Syncing tally_groups.
+2025-01-06 16:06:47,678 INFO:groups_ledgers: Fetching group data from Tally...
+2025-01-06 16:06:47,709 INFO:groups_ledgers: Data fetched from Tally successfully.
+2025-01-06 16:06:53,681 INFO:Ensured table 'tally_groups' exists with correct schema.
+2025-01-06 16:06:55,018 INFO:Data upserted into 'tally_groups' without creating duplicates.
+2025-01-06 16:06:55,019 INFO:groups_ledgers: Fetching ledger data from Tally...
+2025-01-06 16:06:55,067 INFO:groups_ledgers: Data fetched from Tally successfully.
+2025-01-06 16:07:00,641 INFO:Ensured table 'tally_ledgers' exists with correct schema.
+2025-01-06 16:07:06,066 INFO:Data upserted into 'tally_ledgers' without creating duplicates.
+2025-01-06 16:07:06,082 INFO:Syncing ledger_monthly_summary.
+2025-01-06 16:07:06,082 INFO:ledger_monthly_summary: Constructing XML payload...
+2025-01-06 16:07:06,082 INFO:ledger_monthly_summary: Fetching data from Tally...
+2025-01-06 16:07:06,113 INFO:ledger_monthly_summary: Data fetched from Tally successfully.
+2025-01-06 16:07:06,113 INFO:ledger_monthly_summary: Parsing CSV response...
+2025-01-06 16:07:06,129 INFO:ledger_monthly_summary: Parsed 12 records.
+2025-01-06 16:07:06,129 INFO:ledger_monthly_summary: Inserting data into PostgreSQL...
+2025-01-06 16:07:11,710 INFO:Ensured table 'ledger_monthly_summary' exists with correct schema.
+2025-01-06 16:07:12,626 INFO:Ledger monthly summary data upserted into 'ledger_monthly_summary' without duplicates.
+2025-01-06 16:07:22,360 INFO:Sending XML data to Tally
+2025-01-06 16:07:23,093 INFO:Successfully sent data to Tally
+2025-01-06 16:07:23,093 INFO:Successfully exported 5 transactions to Tally
+2025-01-06 16:43:40,163 INFO:Script started.
+2025-01-06 16:43:52,488 INFO:Script started.
+2025-01-06 16:44:08,974 INFO:Sending XML data to Tally
+2025-01-06 16:44:09,775 INFO:Successfully sent data to Tally
+2025-01-06 16:44:09,775 INFO:Successfully exported 5 transactions to Tally
+2025-01-20 14:33:25,662 INFO:Starting data sync from FY 2015-16 to FY 2024-2025
+2025-01-20 14:33:25,686 INFO:Processing FY 2015-2016
+2025-01-20 14:33:25,687 ERROR:Error processing FY 2015-2016: name 'requests' is not defined
+2025-01-20 14:33:25,688 INFO:Processing FY 2016-2017
+2025-01-20 14:33:25,688 ERROR:Error processing FY 2016-2017: name 'requests' is not defined
+2025-01-20 14:33:25,688 INFO:Processing FY 2017-2018
+2025-01-20 14:33:25,691 ERROR:Error processing FY 2017-2018: name 'requests' is not defined
+2025-01-20 14:33:25,692 INFO:Processing FY 2018-2019
+2025-01-20 14:33:25,692 ERROR:Error processing FY 2018-2019: name 'requests' is not defined
+2025-01-20 14:33:25,693 INFO:Processing FY 2019-2020
+2025-01-20 14:33:25,694 ERROR:Error processing FY 2019-2020: name 'requests' is not defined
+2025-01-20 14:33:25,696 INFO:Processing FY 2020-2021
+2025-01-20 14:33:25,696 ERROR:Error processing FY 2020-2021: name 'requests' is not defined
+2025-01-20 14:33:25,697 INFO:Processing FY 2021-2022
+2025-01-20 14:33:25,697 ERROR:Error processing FY 2021-2022: name 'requests' is not defined
+2025-01-20 14:33:25,698 INFO:Processing FY 2022-2023
+2025-01-20 14:33:25,699 ERROR:Error processing FY 2022-2023: name 'requests' is not defined
+2025-01-20 14:33:25,699 INFO:Processing FY 2023-2024
+2025-01-20 14:33:25,700 ERROR:Error processing FY 2023-2024: name 'requests' is not defined
+2025-01-20 14:33:25,700 INFO:Processing FY 2024-2025
+2025-01-20 14:33:25,700 ERROR:Error processing FY 2024-2025: name 'requests' is not defined
+2025-01-20 14:33:25,702 INFO:Tally data sync completed
+2025-01-20 14:36:32,057 INFO:Starting data sync from FY 2015-16 to FY 2024-2025
+2025-01-20 14:36:32,074 INFO:Processing FY 2015-2016
+2025-01-20 14:36:32,079 ERROR:Unexpected error while fetching Tally data: Tally URL is not configured
+2025-01-20 14:36:32,079 ERROR:Error processing FY 2015-2016: Tally URL is not configured
+2025-01-20 14:36:32,080 INFO:Processing FY 2016-2017
+2025-01-20 14:36:32,081 ERROR:Unexpected error while fetching Tally data: Tally URL is not configured
+2025-01-20 14:36:32,081 ERROR:Error processing FY 2016-2017: Tally URL is not configured
+2025-01-20 14:36:32,081 INFO:Processing FY 2017-2018
+2025-01-20 14:36:32,083 ERROR:Unexpected error while fetching Tally data: Tally URL is not configured
+2025-01-20 14:36:32,083 ERROR:Error processing FY 2017-2018: Tally URL is not configured
+2025-01-20 14:36:32,083 INFO:Processing FY 2018-2019
+2025-01-20 14:36:32,083 ERROR:Unexpected error while fetching Tally data: Tally URL is not configured
+2025-01-20 14:36:32,083 ERROR:Error processing FY 2018-2019: Tally URL is not configured
+2025-01-20 14:36:32,085 INFO:Processing FY 2019-2020
+2025-01-20 14:36:32,085 ERROR:Unexpected error while fetching Tally data: Tally URL is not configured
+2025-01-20 14:36:32,085 ERROR:Error processing FY 2019-2020: Tally URL is not configured
+2025-01-20 14:36:32,085 INFO:Processing FY 2020-2021
+2025-01-20 14:36:32,085 ERROR:Unexpected error while fetching Tally data: Tally URL is not configured
+2025-01-20 14:36:32,085 ERROR:Error processing FY 2020-2021: Tally URL is not configured
+2025-01-20 14:36:32,089 INFO:Processing FY 2021-2022
+2025-01-20 14:36:32,089 ERROR:Unexpected error while fetching Tally data: Tally URL is not configured
+2025-01-20 14:36:32,089 ERROR:Error processing FY 2021-2022: Tally URL is not configured
+2025-01-20 14:36:32,089 INFO:Processing FY 2022-2023
+2025-01-20 14:36:32,090 ERROR:Unexpected error while fetching Tally data: Tally URL is not configured
+2025-01-20 14:36:32,090 ERROR:Error processing FY 2022-2023: Tally URL is not configured
+2025-01-20 14:36:32,091 INFO:Processing FY 2023-2024
+2025-01-20 14:36:32,091 ERROR:Unexpected error while fetching Tally data: Tally URL is not configured
+2025-01-20 14:36:32,091 ERROR:Error processing FY 2023-2024: Tally URL is not configured
+2025-01-20 14:36:32,092 INFO:Processing FY 2024-2025
+2025-01-20 14:36:32,092 ERROR:Unexpected error while fetching Tally data: Tally URL is not configured
+2025-01-20 14:36:32,094 ERROR:Error processing FY 2024-2025: Tally URL is not configured
+2025-01-20 14:36:32,096 INFO:Tally data sync completed

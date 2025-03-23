@@ -1,0 +1,70 @@
+2025-01-20 11:19:28,088 INFO:Starting group data synchronization...
+2025-01-20 11:19:28,175 INFO:Successfully fetched data from Tally for export format: CSV
+2025-01-20 11:19:28,175 INFO:Sample Row: {'name': 'A', 'primary_group': 'Sundry Debtors', 'parent_group': 'E', 'group_name': 'Group: %s', 'is_revenue': False, 'is_deemed_positive': True, 'affects_gross_profit': False, 'sort_position': 500}
+2025-01-20 11:19:28,175 INFO:Sample Row: {'Name': 'Amal  Dass-Cement  Builder', 'PrimaryGroup': 'Sundry Debtors', 'ParentGroup': 'D', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'Yes', 'AffectsGrossProfit': 'No', 'SortPosition': '200', None: ['']}
+2025-01-20 11:19:28,175 INFO:Sample Row: {'Name': 'B', 'PrimaryGroup': 'Sundry Debtors', 'ParentGroup': 'F', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'Yes', 'AffectsGrossProfit': 'No', 'SortPosition': '200', None: ['']}
+2025-01-20 11:19:28,175 INFO:Sample Row: {'Name': 'Bank Accounts', 'PrimaryGroup': 'Bank Accounts', 'ParentGroup': 'Current Assets', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'Yes', 'AffectsGrossProfit': 'No', 'SortPosition': '220', None: ['']}
+2025-01-20 11:19:28,175 INFO:Sample Row: {'Name': 'Bank OD A/c', 'PrimaryGroup': 'Bank OD A/c', 'ParentGroup': 'Loans (Liability)', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'No', 'AffectsGrossProfit': 'No', 'SortPosition': '110', None: ['']}
+2025-01-20 11:19:28,175 INFO:Parsed 51 group records from CSV.
+2025-01-20 11:19:28,366 ERROR:Database error while saving group data: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-01-20 11:19:28,366 ERROR:Group data synchronization failed: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-01-20 11:19:28,366 ERROR:Synchronization process failed: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-01-20 11:19:53,635 INFO:Starting group data synchronization...
+2025-01-20 11:19:53,656 INFO:Successfully fetched data from Tally for export format: CSV
+2025-01-20 11:19:53,656 INFO:Sample Row: {'name': 'A', 'primary_group': 'Sundry Debtors', 'parent_group': 'E', 'group_name': 'Group: %s', 'is_revenue': False, 'is_deemed_positive': True, 'affects_gross_profit': False, 'sort_position': 500}
+2025-01-20 11:19:53,656 INFO:Sample Row: {'Name': 'Amal  Dass-Cement  Builder', 'PrimaryGroup': 'Sundry Debtors', 'ParentGroup': 'D', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'Yes', 'AffectsGrossProfit': 'No', 'SortPosition': '200', None: ['']}
+2025-01-20 11:19:53,656 INFO:Sample Row: {'Name': 'B', 'PrimaryGroup': 'Sundry Debtors', 'ParentGroup': 'F', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'Yes', 'AffectsGrossProfit': 'No', 'SortPosition': '200', None: ['']}
+2025-01-20 11:19:53,656 INFO:Sample Row: {'Name': 'Bank Accounts', 'PrimaryGroup': 'Bank Accounts', 'ParentGroup': 'Current Assets', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'Yes', 'AffectsGrossProfit': 'No', 'SortPosition': '220', None: ['']}
+2025-01-20 11:19:53,656 INFO:Sample Row: {'Name': 'Bank OD A/c', 'PrimaryGroup': 'Bank OD A/c', 'ParentGroup': 'Loans (Liability)', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'No', 'AffectsGrossProfit': 'No', 'SortPosition': '110', None: ['']}
+2025-01-20 11:19:53,656 INFO:Parsed 51 group records from CSV.
+2025-01-20 11:19:53,696 ERROR:Database error while saving group data: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-01-20 11:19:53,696 ERROR:Group data synchronization failed: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-01-20 11:19:53,697 ERROR:Synchronization process failed: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-01-20 11:20:46,920 INFO:Starting group data synchronization...
+2025-01-20 11:20:46,948 INFO:Successfully fetched data from Tally for export format: CSV
+2025-01-20 11:20:46,949 INFO:Sample Row: {'name': 'A', 'primary_group': 'Sundry Debtors', 'parent_group': 'E', 'group_name': 'Group: %s', 'is_revenue': False, 'is_deemed_positive': True, 'affects_gross_profit': False, 'sort_position': 500}
+2025-01-20 11:20:46,949 INFO:Sample Row: {'Name': 'Amal  Dass-Cement  Builder', 'PrimaryGroup': 'Sundry Debtors', 'ParentGroup': 'D', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'Yes', 'AffectsGrossProfit': 'No', 'SortPosition': '200', None: ['']}
+2025-01-20 11:20:46,949 INFO:Sample Row: {'Name': 'B', 'PrimaryGroup': 'Sundry Debtors', 'ParentGroup': 'F', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'Yes', 'AffectsGrossProfit': 'No', 'SortPosition': '200', None: ['']}
+2025-01-20 11:20:46,949 INFO:Sample Row: {'Name': 'Bank Accounts', 'PrimaryGroup': 'Bank Accounts', 'ParentGroup': 'Current Assets', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'Yes', 'AffectsGrossProfit': 'No', 'SortPosition': '220', None: ['']}
+2025-01-20 11:20:46,949 INFO:Sample Row: {'Name': 'Bank OD A/c', 'PrimaryGroup': 'Bank OD A/c', 'ParentGroup': 'Loans (Liability)', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'No', 'AffectsGrossProfit': 'No', 'SortPosition': '110', None: ['']}
+2025-01-20 11:20:46,950 INFO:Parsed 51 group records from CSV.
+2025-01-20 11:20:47,114 ERROR:Database error while saving group data: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-01-20 11:20:47,114 ERROR:Group data synchronization failed: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-01-20 11:20:47,114 ERROR:Synchronization process failed: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-01-20 11:22:54,522 INFO:Starting group data synchronization...
+2025-01-20 11:22:54,530 INFO:Successfully fetched data from Tally for export format: CSV
+2025-01-20 11:22:54,530 INFO:Sample Row: {'name': 'A', 'primary_group': 'Sundry Debtors', 'parent_group': 'E', 'group_name': 'Group: %s', 'is_revenue': False, 'is_deemed_positive': True, 'affects_gross_profit': False, 'sort_position': 500}
+2025-01-20 11:22:54,530 INFO:Sample Row: {'Name': 'Amal  Dass-Cement  Builder', 'PrimaryGroup': 'Sundry Debtors', 'ParentGroup': 'D', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'Yes', 'AffectsGrossProfit': 'No', 'SortPosition': '200', None: ['']}
+2025-01-20 11:22:54,530 INFO:Sample Row: {'Name': 'B', 'PrimaryGroup': 'Sundry Debtors', 'ParentGroup': 'F', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'Yes', 'AffectsGrossProfit': 'No', 'SortPosition': '200', None: ['']}
+2025-01-20 11:22:54,530 INFO:Sample Row: {'Name': 'Bank Accounts', 'PrimaryGroup': 'Bank Accounts', 'ParentGroup': 'Current Assets', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'Yes', 'AffectsGrossProfit': 'No', 'SortPosition': '220', None: ['']}
+2025-01-20 11:22:54,530 INFO:Sample Row: {'Name': 'Bank OD A/c', 'PrimaryGroup': 'Bank OD A/c', 'ParentGroup': 'Loans (Liability)', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'No', 'AffectsGrossProfit': 'No', 'SortPosition': '110', None: ['']}
+2025-01-20 11:22:54,530 INFO:Parsed 51 group records from CSV.
+2025-01-20 11:22:54,705 ERROR:Database error while saving group data: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-01-20 11:22:54,705 ERROR:Group data synchronization failed: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-01-20 11:22:54,705 ERROR:Synchronization process failed: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-01-20 16:11:10,013 INFO:Starting group data synchronization...
+2025-01-20 16:11:10,057 INFO:Successfully fetched data from Tally for export format: CSV
+2025-01-20 16:11:10,057 INFO:Sample Row: {'name': 'A', 'primary_group': 'Sundry Debtors', 'parent_group': 'E', 'group_name': 'Group: %s', 'is_revenue': False, 'is_deemed_positive': True, 'affects_gross_profit': False, 'sort_position': 500}
+2025-01-20 16:11:10,058 INFO:Sample Row: {'Name': 'Amal  Dass-Cement  Builder', 'PrimaryGroup': 'Sundry Debtors', 'ParentGroup': 'D', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'Yes', 'AffectsGrossProfit': 'No', 'SortPosition': '200', None: ['']}
+2025-01-20 16:11:10,058 INFO:Sample Row: {'Name': 'B', 'PrimaryGroup': 'Sundry Debtors', 'ParentGroup': 'F', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'Yes', 'AffectsGrossProfit': 'No', 'SortPosition': '200', None: ['']}
+2025-01-20 16:11:10,058 INFO:Sample Row: {'Name': 'Bank Accounts', 'PrimaryGroup': 'Bank Accounts', 'ParentGroup': 'Current Assets', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'Yes', 'AffectsGrossProfit': 'No', 'SortPosition': '220', None: ['']}
+2025-01-20 16:11:10,058 INFO:Sample Row: {'Name': 'Bank OD A/c', 'PrimaryGroup': 'Bank OD A/c', 'ParentGroup': 'Loans (Liability)', 'GroupName': 'Group: %s', 'IsRevenue': 'No', 'IsDeemedPositive': 'No', 'AffectsGrossProfit': 'No', 'SortPosition': '110', None: ['']}
+2025-01-20 16:11:10,058 INFO:Parsed 51 group records from CSV.
+2025-01-20 16:11:10,103 ERROR:Database error while saving group data: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-01-20 16:11:10,103 ERROR:Group data synchronization failed: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2025-01-20 16:11:10,103 ERROR:Synchronization process failed: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
