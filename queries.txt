@@ -1,0 +1,153 @@
+DB QUERIES OF TALLY-CONNECTOR:
+
+CREATE TABLE IF NOT EXISTS subscriber_db (
+    subscribe_id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    company_id INTEGER NOT NULL,
+    tally_company VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users_tb(user_id),
+    FOREIGN KEY (company_id) REFERENCES company_details(company_id),
+    UNIQUE (user_id, company_id, tally_company)
+)
+
+CREATE TABLE IF NOT EXISTS tally_data (
+    id SERIAL PRIMARY KEY,
+    subscribe_id INTEGER REFERENCES subscriber_db(subscribe_id),
+    date DATE,
+    voucher_type TEXT,
+    voucher_number TEXT,
+    party_name TEXT,
+    voucher_category TEXT,
+    narration TEXT,
+    ledger TEXT,
+    amount NUMERIC,
+    UNIQUE (subscribe_id, date, voucher_type, voucher_number, ledger, amount)
+)
+
+CREATE TABLE IF NOT EXISTS tally_groups (
+    id SERIAL PRIMARY KEY,
+    subscribe_id INTEGER REFERENCES subscriber_db(subscribe_id),
+    GUID TEXT,
+    Name TEXT,
+    Parent TEXT,
+    PrimaryGroup TEXT,
+    Nature TEXT,
+    Sign TEXT,
+    Gross_Net_Profit TEXT,
+    SortPosition BIGINT,
+	UNIQUE (subscribe_id, GUID ,Name,Parent)
+)
+
+CREATE TABLE IF NOT EXISTS tally_ledgers (
+    id SERIAL PRIMARY KEY,
+    subscribe_id INTEGER REFERENCES subscriber_db(subscribe_id),
+    GUID TEXT,
+    Name TEXT,
+    Parent TEXT,
+    Nature TEXT,
+    Sign TEXT,
+    SortPosition BIGINT,
+	UNIQUE (subscribe_id, GUID ,Name,Parent)
+)
+
+CREATE TABLE IF NOT EXISTS ledger_monthly_summary (
+    id SERIAL PRIMARY KEY,
+    subscribe_id INTEGER REFERENCES subscriber_db(subscribe_id),
+    ledger TEXT,
+    financial_year TEXT,
+    month TEXT,
+    opening NUMERIC,
+    debit NUMERIC,
+    credit NUMERIC,
+    closing NUMERIC,
+    UNIQUE (subscribe_id, ledger, financial_year, month)
+)
+
+=======================================================================================================================
+
+QUERIES FOR THE tally_company VALIDATION:
+
+-- 1. Create the Table
+CREATE TABLE tally_companies (
+    tally_company_id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    tally_company_name VARCHAR(255) NOT NULL,
+    user_companies_names TEXT,
+    active_status INTEGER NOT NULL DEFAULT 1,  -- Default to 1
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CHECK (active_status IN (0, 1))
+);
+
+-- 2. Trigger Function for Insertions (Handles Active Status for Inserts)
+CREATE OR REPLACE FUNCTION set_active_status_on_insert()
+RETURNS TRIGGER AS $$
+BEGIN
+    -- Always set the new row's active_status to 1
+    NEW.active_status := 1;
+
+    -- If there's an existing row with active_status = 1, update it to 0
+    UPDATE tally_companies
+    SET active_status = 0
+    WHERE active_status = 1;
+
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+-- 3. Trigger for Insertions (BEFORE INSERT)
+CREATE TRIGGER set_active_status_on_insert_trigger
+BEFORE INSERT ON tally_companies
+FOR EACH ROW
+EXECUTE FUNCTION set_active_status_on_insert();
+
+-- 4. Trigger Function for Updates (Handles Active Status for Updates)
+CREATE OR REPLACE FUNCTION set_active_status_on_update()
+RETURNS TRIGGER AS $$
+BEGIN
+    -- If the active_status of the updated row is being set to 1
+    IF NEW.active_status = 1 THEN
+        -- Set all other rows with active_status = 1 to 0, except the current row
+        UPDATE tally_companies
+        SET active_status = 0
+        WHERE active_status = 1 AND tally_company_id != NEW.tally_company_id;
+    END IF;
+
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+-- 5. Trigger for Updates (BEFORE UPDATE)
+CREATE TRIGGER set_active_status_on_update_trigger
+BEFORE UPDATE ON tally_companies
+FOR EACH ROW
+EXECUTE FUNCTION set_active_status_on_update();
+
+-- 6. Trigger Function for Deletions (Ensures Single Active Row When Only One Row Remains)
+CREATE OR REPLACE FUNCTION set_active_status_on_delete()
+RETURNS TRIGGER AS $$
+BEGIN
+    -- If a row with active_status = 1 is being deleted
+    IF OLD.active_status = 1 THEN
+        -- Find the first row (based on tally_company_id) that has active_status = 0
+        UPDATE tally_companies
+        SET active_status = 1
+        WHERE tally_company_id = (SELECT tally_company_id FROM tally_companies WHERE active_status = 0 ORDER BY tally_company_id LIMIT 1);
+    END IF;
+
+    -- Ensure that if there is only one row left, it has active_status = 1
+    IF (SELECT COUNT(*) FROM tally_companies) = 1 THEN
+        UPDATE tally_companies
+        SET active_status = 1
+        WHERE tally_company_id = (SELECT tally_company_id FROM tally_companies LIMIT 1);
+    END IF;
+
+    RETURN OLD;  -- Return the row being deleted
+END;
+$$ LANGUAGE plpgsql;
+
+-- 7. Trigger for Deletions (AFTER DELETE)
+CREATE TRIGGER set_active_status_on_delete_trigger
+AFTER DELETE ON tally_companies
+FOR EACH ROW
+EXECUTE FUNCTION set_active_status_on_delete();
